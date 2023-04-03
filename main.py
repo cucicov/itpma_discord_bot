@@ -18,13 +18,14 @@ import colorsys
 
 logging.basicConfig(filename='bot.log', level=logging.INFO, format='%(asctime)s %(levelname)s:%(message)s')
 
-TOKEN=''
+TOKEN='MTA4Njk3NTQ4MjMyMDM5NjI5OQ.GItXZO.NmkmhrhGBGGRIIZ0AqhL4cH9WjZKPCCKsYSK3Y'
 
 intents = discord.Intents.default()
-intents.message_content = True
+intents.messages = True
+client = discord.Client(intents=intents)
 
 # set the path and the name for the temporary PNG image of the color
-filepath = "C:/Users/diana/Desktop/ITPMA Master/Anul2/CC4/Pamtone"
+filepath = "imgs"
 tempname = "temp_img.png"
 filepath = filepath + tempname
 
@@ -32,7 +33,6 @@ filepath = filepath + tempname
 loading_text = ["Mhmmm, let's see...","I bet you've never heard of this one before.", "Do you know this one?", 
                 "Let me think, what new colors are there?", "I have updates for you...",
                 "Allow me to find a color made especially just for you"]
-
 
 def generate_color():
 
@@ -183,150 +183,144 @@ def generate_random_green():
     green_hex = '#{:02x}{:02x}{:02x}'.format(r, g, b)
     return green_hex
 
+@client.event
+async def on_message(message):
 
-class MyClient(discord.Client):
-    async def on_ready(self):
-        print('Logged on as', self.user)
+	# don't respond to ourselves
+	if message.author == client.user:
+	    return
 
-    async def on_message(self, message):
+	logging.info(f'{message.author}: {message.content}')
+	
+	# if somebody types /color, the bot responds
+	if message.content == '/color':
 
-        logging.info(f'{message.author}: {message.content}')
-        # don't respond to ourselves
-        if message.author == self.user:
-            return
-        
-        # if somebody types /color, the bot responds
-        if message.content == '/color':
+	    await message.channel.send(loading_text[random.randint(0,5)])   # have the bot reply with one of the loading catchphrases   
+	    
+	    generate_color()
+	    get_color_info(color_hex)
 
-            await message.channel.send(loading_text[random.randint(0,5)])   # have the bot reply with one of the loading catchphrases   
-            
-            generate_color()
-            get_color_info(color_hex)
+	    # send message and image on Discord server
+	    await message.channel.send(f"{color_name} or {color_hex}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)   
 
-            # send message and image on Discord server
-            await message.channel.send(f"{color_name} or {color_hex}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)   
-        
-        if message.content == '/blue':
-            
-            await message.channel.send("Let me think of a blue color for you...")
+	if message.content == '/blue':
+	    
+	    await message.channel.send("Let me think of a blue color for you...")
 
-            blue_shade = generate_random_blue()
-            get_color_info(blue_shade)
+	    blue_shade = generate_random_blue()
+	    get_color_info(blue_shade)
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of blue color, for example {color_name} or {blue_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of blue color, for example {color_name} or {blue_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-        if message.content == '/green':
-            
-            await message.channel.send("Let me think of a green color for you...")
+	if message.content == '/green':
+	    
+	    await message.channel.send("Let me think of a green color for you...")
 
-            green_shade = generate_random_green()
-            get_color_info(green_shade)
+	    green_shade = generate_random_green()
+	    get_color_info(green_shade)
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of green color, for example {color_name} or {green_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
-        
-        if message.content == '/red':
-            
-            await message.channel.send("Let me think of a red color for you...")
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of green color, for example {color_name} or {green_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-            red_shade = generate_random_red()
-            get_color_info(red_shade)
+	if message.content == '/red':
+	    
+	    await message.channel.send("Let me think of a red color for you...")
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of red color, for example {color_name} or {red_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
+	    red_shade = generate_random_red()
+	    get_color_info(red_shade)
 
-        if message.content == '/yellow':
-            
-            await message.channel.send("Let me think of a yellow color for you...")
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of red color, for example {color_name} or {red_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-            yellow_shade = generate_random_yellow()
-            get_color_info(yellow_shade)
+	if message.content == '/yellow':
+	    
+	    await message.channel.send("Let me think of a yellow color for you...")
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of yellow color, for example {color_name} or {yellow_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
+	    yellow_shade = generate_random_yellow()
+	    get_color_info(yellow_shade)
 
-        if message.content == '/purple':
-            
-            await message.channel.send("Let me think of a purple color for you...")
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of yellow color, for example {color_name} or {yellow_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-            purple_shade = generate_random_purple()
-            get_color_info(purple_shade)
+	if message.content == '/purple':
+	    
+	    await message.channel.send("Let me think of a purple color for you...")
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of purple color, for example {color_name} or {purple_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
+	    purple_shade = generate_random_purple()
+	    get_color_info(purple_shade)
 
-        if message.content == '/orange':
-            
-            await message.channel.send("Let me think of a orange color for you...")
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of purple color, for example {color_name} or {purple_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-            orange_shade = generate_random_orange()
-            get_color_info(orange_shade)
+	if message.content == '/orange':
+	    
+	    await message.channel.send("Let me think of a orange color for you...")
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of orange color, for example {color_name} or {orange_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
-        
-        if message.content == '/pink':
-            
-            await message.channel.send("Let me think of a pink color for you...")
+	    orange_shade = generate_random_orange()
+	    get_color_info(orange_shade)
 
-            pink_shade = generate_random_pink()
-            get_color_info(pink_shade)
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of orange color, for example {color_name} or {orange_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
 
-            # send message and image on Discord server
-            await message.channel.send(f"There are many shades of pink color, for example {color_name} or {pink_shade}")
-            await message.channel.send(file=discord.File(filepath))  #send image
-            
-            # delete the image after x seconds
-            time.sleep(1)
-            os.remove(filepath)
-        
-        if message.content == "/help":
-            with open("help.txt", "r") as f:
-                help_text = f.read()
-            await message.author.send(help_text) # private text sent by bot
-            await message.author.send("Pssst, you can also chat with me in private :shushing_face: :spy: :wink:")
-            await message.channel.send(help_text) # text send on the channel
+	if message.content == '/pink':
+	    
+	    await message.channel.send("Let me think of a pink color for you...")
+
+	    pink_shade = generate_random_pink()
+	    get_color_info(pink_shade)
+
+	    # send message and image on Discord server
+	    await message.channel.send(f"There are many shades of pink color, for example {color_name} or {pink_shade}")
+	    await message.channel.send(file=discord.File(filepath))  #send image
+	    
+	    # delete the image after x seconds
+	    time.sleep(1)
+	    os.remove(filepath)
+
+	if message.content == "/help":
+	    with open("help.txt", "r") as f:
+	        help_text = f.read()
+	    await message.author.send(help_text) # private text sent by bot
+	    await message.author.send("Pssst, you can also chat with me in private :shushing_face: :spy: :wink:")
+	    await message.channel.send(help_text) # text send on the channel
             
             
-
-client = MyClient(intents=intents)
-
 @client.event
 async def on_guild_join(guild):
     logging.info(f'Joined server: {guild.id}')
@@ -560,8 +554,5 @@ oblique = ["A very small object         ",
 "You can only make one dot at a time",
 "You don't have to be ashamed of using your own ideas",
 "[blank white card]"]
-
-if message.content == "/shuffle":
-        await message.channel.send(oblique[random.randint(0,187)])
 
 client.run(TOKEN)

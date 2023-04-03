@@ -1,0 +1,117 @@
+2023-04-03 12:43:18,164 INFO:logging in using static token
+2023-04-03 12:43:19,051 INFO:Shard ID None has sent the IDENTIFY payload.
+2023-04-03 12:43:19,317 INFO:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-b-36ds",{"micros":101110,"calls":["id_created",{"micros":1101,"calls":[]},"session_lookup_time",{"micros":776,"calls":[]},"session_lookup_finished",{"micros":17,"calls":[]},"discord-sessions-blue-prd-2-88",{"micros":98081,"calls":["start_session",{"micros":46926,"calls":["discord-api-b5f5f7b6b-6vgwq",{"micros":41393,"calls":["get_user",{"micros":10703},"get_guilds",{"micros":3710},"send_scheduled_deletion_message",{"micros":13},"guild_join_requests",{"micros":144},"authorized_ip_coro",{"micros":13}]}]},"starting_guild_connect",{"micros":58,"calls":[]},"presence_started",{"micros":3035,"calls":[]},"guilds_started",{"micros":81,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":47927,"calls":[]},"connect_finished",{"micros":47931,"calls":[]},"build_ready",{"micros":21,"calls":[]},"clean_ready",{"micros":0,"calls":[]},"optimize_ready",{"micros":26,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 5ad2b0118bacede4a668ecd95fea36a5).
+2023-04-03 12:43:21,342 INFO:itpma#1298 has connected to Discord!
+2023-04-03 12:43:58,245 INFO:Joined server: 998234966284582942
+2023-04-03 12:44:10,395 WARNING:Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "main.py", line 556, in <module>
+    client.run(TOKEN)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\site-packages\discord\client.py", line 713, in run
+    loop.run_forever()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 541, in run_forever
+    self._run_once()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\asyncio\base_events.py", line 1786, in _run_once
+    handle._run()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\site-packages\discord\ext\tasks\__init__.py", line 101, in _loop
+    await self.coro(*args, **kwargs)
+  File "main.py", line 355, in myLoop
+    get_color_info(color_hex)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 183, in __del__
+    self.stop()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 149, in stop
+    self.send_remote_shutdown_command()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 128, in send_remote_shutdown_command
+    request.urlopen(f"{self.service_url}/shutdown")
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 543, in _open
+    '_open', req)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 503, in _call_chain
+    result = func(*args)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1378, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\urllib\request.py", line 1350, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1277, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1323, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1272, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 1032, in _send_output
+    self.send(msg)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 972, in send
+    self.connect()
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\http\client.py", line 944, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "C:\Users\itpma\AppData\Local\Programs\Python\Python37\lib\socket.py", line 716, in create_connection
+    sock.connect(sa)
+
+2023-04-03 12:51:05,870 INFO:Received signal to terminate bot and event loop.
+2023-04-03 12:51:05,870 INFO:Cleaning up tasks.
+2023-04-03 12:51:05,870 INFO:Cleaning up after 3 tasks.
+2023-04-03 12:51:05,870 INFO:All tasks finished cancelling.
+2023-04-03 12:51:05,870 INFO:Closing the event loop.
+2023-04-03 12:53:20,680 INFO:logging in using static token
+2023-04-03 12:53:25,380 INFO:Shard ID None has sent the IDENTIFY payload.
+2023-04-03 12:53:25,677 INFO:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-dfrw",{"micros":152098,"calls":["id_created",{"micros":1020,"calls":[]},"session_lookup_time",{"micros":4306,"calls":[]},"session_lookup_finished",{"micros":22,"calls":[]},"discord-sessions-blue-prd-2-192",{"micros":145820,"calls":["start_session",{"micros":84469,"calls":["discord-api-b5f5f7b6b-tfhh5",{"micros":78462,"calls":["get_user",{"micros":11248},"get_guilds",{"micros":8802},"send_scheduled_deletion_message",{"micros":15},"guild_join_requests",{"micros":240},"authorized_ip_coro",{"micros":13}]}]},"starting_guild_connect",{"micros":58,"calls":[]},"presence_started",{"micros":207,"calls":[]},"guilds_started",{"micros":125,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":60935,"calls":[]},"connect_finished",{"micros":60940,"calls":[]},"build_ready",{"micros":18,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":0,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 1e6ca03a3042ff6d6588fa359df97865).
+2023-04-03 12:53:27,706 INFO:itpma#1298 has connected to Discord!
+2023-04-03 12:58:55,450 INFO:Received signal to terminate bot and event loop.
+2023-04-03 12:58:55,450 INFO:Cleaning up tasks.
+2023-04-03 12:58:55,450 INFO:Cleaning up after 1 tasks.
+2023-04-03 12:58:55,450 INFO:All tasks finished cancelling.
+2023-04-03 12:58:55,450 INFO:Closing the event loop.
+2023-04-03 12:59:53,352 INFO:logging in using static token
+2023-04-03 13:00:02,236 INFO:Shard ID None has sent the IDENTIFY payload.
+2023-04-03 13:00:02,450 INFO:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-ffh0",{"micros":65401,"calls":["id_created",{"micros":1549,"calls":[]},"session_lookup_time",{"micros":5621,"calls":[]},"session_lookup_finished",{"micros":14,"calls":[]},"discord-sessions-blue-prd-2-204",{"micros":57847,"calls":["start_session",{"micros":50386,"calls":["discord-api-b5f5f7b6b-p22cs",{"micros":44416,"calls":["get_user",{"micros":12434},"get_guilds",{"micros":4280},"send_scheduled_deletion_message",{"micros":16},"guild_join_requests",{"micros":185},"authorized_ip_coro",{"micros":14}]}]},"starting_guild_connect",{"micros":53,"calls":[]},"presence_started",{"micros":191,"calls":[]},"guilds_started",{"micros":143,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":7039,"calls":[]},"connect_finished",{"micros":7044,"calls":[]},"build_ready",{"micros":26,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":1,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 38b6f2532413f42c1db936cf845beff5).
+2023-04-03 13:00:04,462 INFO:itpma#1298 has connected to Discord!
+2023-04-03 13:01:24,757 INFO:Received signal to terminate bot and event loop.
+2023-04-03 13:01:24,757 INFO:Cleaning up tasks.
+2023-04-03 13:01:24,757 INFO:Cleaning up after 1 tasks.
+2023-04-03 13:01:24,757 INFO:All tasks finished cancelling.
+2023-04-03 13:01:24,757 INFO:Closing the event loop.
+2023-04-03 13:01:49,948 INFO:logging in using static token
+2023-04-03 13:01:50,547 INFO:Shard ID None has sent the IDENTIFY payload.
+2023-04-03 13:01:50,797 INFO:Shard ID None has connected to Gateway: ["gateway-prd-us-east1-d-hhd9",{"micros":120065,"calls":["id_created",{"micros":1627,"calls":[]},"session_lookup_time",{"micros":207,"calls":[]},"session_lookup_finished",{"micros":21,"calls":[]},"discord-sessions-blue-prd-2-261",{"micros":117343,"calls":["start_session",{"micros":67945,"calls":["discord-api-b5f5f7b6b-87s25",{"micros":63030,"calls":["get_user",{"micros":25426},"get_guilds",{"micros":4037},"send_scheduled_deletion_message",{"micros":10},"guild_join_requests",{"micros":162},"authorized_ip_coro",{"micros":10}]}]},"starting_guild_connect",{"micros":51,"calls":[]},"presence_started",{"micros":40531,"calls":[]},"guilds_started",{"micros":128,"calls":[]},"guilds_connect",{"micros":2,"calls":[]},"presence_connect",{"micros":8666,"calls":[]},"connect_finished",{"micros":8670,"calls":[]},"build_ready",{"micros":15,"calls":[]},"clean_ready",{"micros":1,"calls":[]},"optimize_ready",{"micros":0,"calls":[]},"split_ready",{"micros":1,"calls":[]}]}]}] (Session ID: 30e0e42fd03f197b99176572c09b24ef).
+2023-04-03 13:01:52,826 INFO:itpma#1298 has connected to Discord!
+2023-04-03 13:02:03,458 INFO:cucicov#3642: /color
+2023-04-03 13:02:03,788 INFO:itpma#1298: Do you know this one?
+2023-04-03 13:02:16,397 INFO:itpma#1298: Citron or #9bc11d
+2023-04-03 13:02:16,724 INFO:itpma#1298: 
+2023-04-03 13:02:27,574 INFO:cucicov#3642: /purple
+2023-04-03 13:02:27,784 INFO:itpma#1298: Let me think of a purple color for you...
+2023-04-03 13:02:38,029 INFO:itpma#1298: There are many shades of purple color, for example Purple Heart or #761fe6
+2023-04-03 13:02:38,599 INFO:itpma#1298: 
+2023-04-03 13:02:55,015 INFO:cucicov#3642: /help
+2023-04-03 13:02:55,529 INFO:itpma#1298: Hey there, I'm happy to help you :blush:
+
+My job is to generate and share with you a random color of my choice every hour.
+
+Commands list:
+/color = immediately generate a new color
+/blue = generate a shade of blue
+/green = generate a shade of green
+/red = generate a shade of red
+/orange = generate a shade of orange
+/yellow = generate a shade of yellow
+/purple = generate a shade of purple
+/pink = generate a shade of pink
+2023-04-03 13:02:55,795 INFO:itpma#1298: Pssst, you can also chat with me in private :shushing_face: :spy: :wink:
+2023-04-03 13:02:56,032 INFO:itpma#1298: Hey there, I'm happy to help you :blush:
+
+My job is to generate and share with you a random color of my choice every hour.
+
+Commands list:
+/color = immediately generate a new color
+/blue = generate a shade of blue
+/green = generate a shade of green
+/red = generate a shade of red
+/orange = generate a shade of orange
+/yellow = generate a shade of yellow
+/purple = generate a shade of purple
+/pink = generate a shade of pink

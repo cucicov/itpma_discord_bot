@@ -1,4 +1,14 @@
-# Pamtone
+A discord bot developed by ITPMA students.
+Bucharest, UNATC, 2023.
+
+# Installation :shipit:
+- to add bot to yout server >> https://discordapp.com/oauth2/authorize?&client_id=1086975482320396299&scope=bot
+
+# Running it locally 
+1. pip install -r requirements.txt
+2. install ffmpeg and make sure it is added to the PATH variable
+
+## Pamtone (by @dienuq)
  A discord bot with a PhD in colors.
 
 "Know-Your-Colors" is a Discord bot whose only purpose is to help you broaden your color knowledge.
@@ -30,3 +40,14 @@ How to use this:
 Possible issues and how to fix:
 If the bot is not sending any image, modify line 72 in main.py. 
 WebDriverWait is by default 2 seconds, but maybe it takes more time for the page to load, so increase that number.
+
+Commands list:
+/help
+/color = immediately generate a new color
+/blue = generate a shade of blue
+/green = generate a shade of green
+/red = generate a shade of red
+/orange = generate a shade of orange
+/yellow = generate a shade of yellow
+/purple = generate a shade of purple
+/pink = generate a shade of pink
