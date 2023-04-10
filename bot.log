@@ -115,3 +115,103 @@ Commands list:
 /yellow = generate a shade of yellow
 /purple = generate a shade of purple
 /pink = generate a shade of pink
+2023-04-10 10:43:26,518 INFO:logging in using static token
+2023-04-10 10:43:29,873 INFO:Shard ID None has connected to Gateway (Session ID: d41c766cfa4473d9269dabb58dd6ef10).
+2023-04-10 10:43:31,948 INFO:dibot#9448 has connected to Discord!
+2023-04-10 10:44:01,533 INFO:DenisFlueraru#9687: 
+2023-04-10 10:44:25,977 INFO:DenisFlueraru#9687: 
+2023-04-10 10:44:30,373 INFO:DenisFlueraru#9687: 
+2023-04-10 10:45:14,662 INFO:Joined server: 1087294797158559794
+2023-04-10 10:45:43,398 WARNING:Shard ID None heartbeat blocked for more than 10 seconds.
+Loop thread traceback (most recent call last):
+  File "/Users/denisflueraru/Documents/dibot/itpma_discord_bot/main.py", line 563, in <module>
+    client.run(TOKEN)
+  File "/opt/homebrew/lib/python3.10/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1899, in _run_once
+    handle._run()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/opt/homebrew/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/Users/denisflueraru/Documents/dibot/itpma_discord_bot/main.py", line 549, in myLoop
+    get_color_info(color_hex)
+  File "/Users/denisflueraru/Documents/dibot/itpma_discord_bot/main.py", line 258, in get_color_info
+    driver.get(url)
+  File "/opt/homebrew/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/opt/homebrew/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 438, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/opt/homebrew/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 290, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/opt/homebrew/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 311, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+  File "/opt/homebrew/lib/python3.10/site-packages/urllib3/request.py", line 78, in request
+    return self.request_encode_body(
+  File "/opt/homebrew/lib/python3.10/site-packages/urllib3/request.py", line 170, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/opt/homebrew/lib/python3.10/site-packages/urllib3/poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/opt/homebrew/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/opt/homebrew/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/opt/homebrew/Cellar/python@3.10/3.10.8/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+
+2023-04-10 10:45:48,443 ERROR:Attempting a reconnect in 1.74s
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/opt/homebrew/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+2023-04-10 10:45:48,445 INFO:DenisFlueraru#9687: 
+2023-04-10 10:45:48,445 INFO:DenisFlueraru#9687: 
+2023-04-10 10:45:54,862 INFO:Shard ID None has successfully RESUMED session d41c766cfa4473d9269dabb58dd6ef10.
+2023-04-10 10:45:54,863 INFO:DenisFlueraru#9687: 
+2023-04-10 10:45:54,863 INFO:DenisFlueraru#9687: 
+2023-04-10 10:46:52,502 INFO:DenisFlueraru#9687: 
+2023-04-10 10:48:51,564 INFO:logging in using static token
+2023-04-10 10:48:54,717 INFO:Shard ID None has connected to Gateway (Session ID: 63fe6656f0c738861f006510d271eb7e).
+2023-04-10 10:48:56,724 INFO:dibot#9448 has connected to Discord!
+2023-04-10 10:49:07,669 INFO:DenisFlueraru#9687: 
+2023-04-10 10:49:11,291 INFO:DenisFlueraru#9687: 
+2023-04-10 10:50:41,184 INFO:logging in using static token
+2023-04-10 10:50:42,454 INFO:Shard ID None has connected to Gateway (Session ID: dc07cc31e12074fa1e3fe4750892b3a8).
+2023-04-10 10:50:44,459 INFO:dibot#9448 has connected to Discord!
+2023-04-10 10:50:53,040 INFO:DenisFlueraru#9687: 
+2023-04-10 10:50:57,325 INFO:DenisFlueraru#9687: 
+2023-04-10 10:53:07,266 INFO:logging in using static token
+2023-04-10 10:53:08,544 INFO:Shard ID None has connected to Gateway (Session ID: 7bfdfbfd93a0667d7c8690047e8b3381).
+2023-04-10 10:53:10,547 INFO:dibot#9448 has connected to Discord!
+2023-04-10 10:53:17,353 INFO:DenisFlueraru#9687: 
+2023-04-10 10:53:20,681 INFO:DenisFlueraru#9687: 
+2023-04-10 10:53:22,521 INFO:DenisFlueraru#9687: 
+2023-04-10 10:54:39,832 INFO:Shard ID None session has been invalidated.
+2023-04-10 10:56:35,214 INFO:logging in using static token
+2023-04-10 10:56:36,501 INFO:Shard ID None has connected to Gateway (Session ID: b10de19c70bb481e69bc7e0fd7fb9d6b).
+2023-04-10 10:56:38,536 INFO:dibot#9448 has connected to Discord!
+2023-04-10 10:56:44,902 INFO:DenisFlueraru#9687: 
+2023-04-10 10:56:49,084 INFO:DenisFlueraru#9687: 
+2023-04-10 11:01:23,470 INFO:logging in using static token
+2023-04-10 11:01:24,729 INFO:Shard ID None has connected to Gateway (Session ID: 064ba83b9bc39a986fbb6c8d118f0707).
+2023-04-10 11:01:26,736 INFO:dibot#9448 has connected to Discord!
+2023-04-10 11:01:34,832 INFO:DenisFlueraru#9687: /shuffle
+2023-04-10 11:02:17,472 INFO:logging in using static token
+2023-04-10 11:02:20,866 INFO:Shard ID None has connected to Gateway (Session ID: 18f09a7c8e7de70153a5521cb3592be0).
+2023-04-10 11:02:22,876 INFO:dibot#9448 has connected to Discord!
+2023-04-10 11:02:23,985 INFO:DenisFlueraru#9687: /shuffle
+2023-04-10 11:02:26,705 INFO:DenisFlueraru#9687: /blue
