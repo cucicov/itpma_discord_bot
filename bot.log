@@ -215,3 +215,4 @@ discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
 2023-04-10 11:02:22,876 INFO:dibot#9448 has connected to Discord!
 2023-04-10 11:02:23,985 INFO:DenisFlueraru#9687: /shuffle
 2023-04-10 11:02:26,705 INFO:DenisFlueraru#9687: /blue
+2023-04-10 11:05:20,354 INFO:Shard ID None session has been invalidated.

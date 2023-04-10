@@ -51,3 +51,7 @@ Commands list:
 /yellow = generate a shade of yellow
 /purple = generate a shade of purple
 /pink = generate a shade of pink
+
+## Oblique Strategies BOT
+
+The original card-based game invented by Brian Eno and Peter Schmidt now available as a bot. Just type "/shuffle" and an interpretable message will show up for you to decide the next step to be taken.
