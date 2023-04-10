@@ -55,3 +55,6 @@ Commands list:
 ## Oblique Strategies BOT
 
 The original card-based game invented by Brian Eno and Peter Schmidt now available as a bot. Just type "/shuffle" and an interpretable message will show up for you to decide the next step to be taken.
+
+## music bot
+a bot that can play your music. Just type "/play"

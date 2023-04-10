@@ -513,7 +513,12 @@ async def on_message(message):
             
     if message.content == "/shuffle":
         await message.channel.send(oblique[random.randint(0,187)])
-            
+
+      if message.content.startswith('/play'):
+        channelVoice = client.get_guild(1087291719898382427).get_channel(1087291720531705939)
+        voice_client = await channelVoice.connect()
+        voice_client.play(discord.FFmpegPCMAudio("Sound\\The Weeknd - Starboy (Live From The AMAs) (192 kbps).mp3"))      
+
 @client.event
 async def on_guild_join(guild):
     logging.info(f'Joined server: {guild.id}')
